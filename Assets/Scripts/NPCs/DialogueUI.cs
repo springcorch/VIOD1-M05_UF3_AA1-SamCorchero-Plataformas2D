@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class DialogueUI : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class DialogueUI : MonoBehaviour
 
     void Start()
     {
+        playerM.enabled = false;
         textLabel.text = string.Empty;
         StartDialogue();
     }
@@ -94,6 +96,7 @@ public class DialogueUI : MonoBehaviour
         }
         else
         {
+            playerM.enabled = true;
             textLabel.text = string.Empty;
             Destroy(gameObject);
         }
