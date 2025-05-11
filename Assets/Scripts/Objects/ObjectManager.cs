@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class ObjectManager : MonoBehaviour
 {
     //variable para coger el textmeshpro del texto de victoria
-    public TextMeshProUGUI lvlCleared;
+    public TMP_Text lvlCleared;
 
     //string vacia que se puede cambiar en el inspector para poner el nombre de de la escena que se quiera cambiar
     public string nameScene = "";

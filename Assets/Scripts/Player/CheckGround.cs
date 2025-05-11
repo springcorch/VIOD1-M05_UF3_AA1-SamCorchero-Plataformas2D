@@ -8,12 +8,22 @@ public class CheckGround : MonoBehaviour
     //Nuestro trigger ha entrado en una colisión
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        isGrounded = true;
+        //If la colision detectada esta marcada con el tag Ground
+        if (collision.CompareTag("Ground"))
+        {
+            //Se detecta que el Player esta en el suelo
+            isGrounded = true;
+        }
     }
 
     //Nuestro trigger ha salido de esa colisión
     private void OnTriggerExit2D(Collider2D collision)
     {
-        isGrounded = false;
+        //If la colision detectada esta marcada con el tag Ground
+        if (collision.CompareTag("Ground"))
+        {
+            //Se detecta que el Player esta en el aires
+            isGrounded = false;
+        }
     }
 }
