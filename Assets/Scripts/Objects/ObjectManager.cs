@@ -7,13 +7,22 @@ public class ObjectManager : MonoBehaviour
     //variable para coger el textmeshpro del texto de victoria
     public TMP_Text lvlCleared;
 
+    //Para el score (feedback)
+    public TMP_Text scoreObjects;
+    private int totalObjects;
+    private int collectedObjects;
+
     //string vacia que se puede cambiar en el inspector para poner el nombre de de la escena que se quiera cambiar
     public string nameScene = "";
 
-    //Esta funcion hara que el objeto padre de los objetos recolectables mire si quedan hijos de este cada frame
+    private void Start()
+    {
+        totalObjects = transform.childCount;
+    }
+
     private void Update() 
     {
-        //si no detecta que tiene ningun hijo
+        //Esta funcion hara que el objeto padre de los objetos recolectables mire si quedan hijos de este cada frame
         if (transform.childCount == 0)
         {
             //Se muestra texto de victoria
@@ -21,6 +30,11 @@ public class ObjectManager : MonoBehaviour
             //activa la funcion de ChangeScene despues de un segundo
             Invoke("ChangeScene", 1);
         }
+
+        //Va restando cuando vayamos cogiendo los objetos, haciendolo un contador
+        collectedObjects = transform.childCount;
+        //Muestra este texto en pantalla actualizado, los ints se vuelven strings para evitar fallos a la hora de mostrarse
+        scoreObjects.text = "Objects: " + collectedObjects.ToString() + " / " + totalObjects.ToString();
     }
 
     //Funcion para cambiar de escena
