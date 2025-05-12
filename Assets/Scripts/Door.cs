@@ -23,8 +23,11 @@ public class Door : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player")) {
-            info.gameObject.SetActive(false);
-            inDoor = false;
+            //si info no se ha destruido aún, se desactiva
+            if(info != null) { 
+                info.gameObject.SetActive(false);
+                inDoor = false;
+            }
         }
     }
 
