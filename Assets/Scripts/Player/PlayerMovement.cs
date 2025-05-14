@@ -11,10 +11,6 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canDoubleJump;
 
-    //Multiplicadores para que depende como cliquemos el espacio vaya mas alto o mas bajo
-    public float fallMultiplier = 0.5f;
-    public float lowJumpMultiplier = 1f;
-
     //El rigidbody de nuestro personaje
     private Rigidbody2D rb;
     //Animaciones para movimiento
@@ -100,18 +96,6 @@ public class PlayerMovement : MonoBehaviour
         else { 
             rb.velocity = new Vector2(0, rb.velocity.y);
             animator.SetBool("Run", false);
-        }
-
-        //Mejorar el salto con las fisicas de la gravedad y el Vector.up que hace que solo afecte al +y
-        //Salta mas alto al tener una gravedad menor
-        if (rb.velocity.y < 0)
-        {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier) * Time.deltaTime;
-        }
-        //Salta mas bajo al tener una gravedad mayor y esto ocurre si no hemos mantenido el espacio
-        if (rb.velocity.y > 0 && !Input.GetKey("space"))
-        {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier) * Time.deltaTime;
         }
     }
 }

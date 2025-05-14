@@ -16,7 +16,7 @@ public class DialogueUI : MonoBehaviour
     [TextArea(1,3)]
     public string[] dialogue;
     //velocidad en la que va el texto al escribirse
-    public float textSpeed;
+    public float textSpeed = 0.1f;
 
     //index del dialogo que se va a mostrar dentro de la string de dialoue[]
     //y para saber si la coroutina esta en funcionamiento
@@ -25,7 +25,10 @@ public class DialogueUI : MonoBehaviour
 
     void Start()
     {
-        playerM.enabled = false;
+        if (playerM != null)
+        {
+            playerM.enabled = false;
+        }
         textLabel.text = string.Empty;
         StartDialogue();
     }
@@ -96,7 +99,10 @@ public class DialogueUI : MonoBehaviour
         }
         else
         {
-            playerM.enabled = true;
+            if (playerM != null)
+            {
+                playerM.enabled = true;
+            }
             textLabel.text = string.Empty;
             Destroy(gameObject);
         }

@@ -833,7 +833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info: {fileID: 225938277}
-  lvlName: Lvl1
+  lvlName: Level_01
 --- !u!61 &909197017
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1001,7 +1001,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.55}
+  m_Offset: {x: 0, y: -0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1012,7 +1012,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.1}
+  m_Size: {x: 0.9, y: 0.05}
   m_EdgeRadius: 0
 --- !u!1 &1254737600
 GameObject:
@@ -2488,10 +2488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 6
-  jumpSpeed: 8
-  doubleJumpSpeed: 2.5
-  fallMultiplier: 0.5
-  lowJumpMultiplier: 1
+  jumpSpeed: 9
+  doubleJumpSpeed: 7.5
 --- !u!50 &2028129254
 Rigidbody2D:
   serializedVersion: 4
@@ -2504,10 +2502,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
