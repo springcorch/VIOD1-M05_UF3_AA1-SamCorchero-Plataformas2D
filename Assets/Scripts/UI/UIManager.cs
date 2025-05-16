@@ -37,7 +37,7 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 1;
         _player.PlayRandomClip();
-        SceneManager.LoadScene("Town");
+        SceneManager.LoadScene("Menu_Main");
     }
 
     public void QuitGame() {

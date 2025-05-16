@@ -6,6 +6,8 @@ public class DialogueUI : MonoBehaviour
 {    
     //coge la script del movimiento del jugador en el inspector
     public PlayerMovement playerM;
+    //Feedback para que el jugador pulse click para continuar
+    public GameObject click;
     
     //asigna el texto donde estara el dialogo
     public TMP_Text textLabel;
@@ -41,6 +43,7 @@ public class DialogueUI : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             _audioSource.Stop();
+            click.SetActive(true);
             //si se estaba haciendo una coroutina esta se para y se muestra todo el dialogo
             if (_isTyping != null)
             {
@@ -79,6 +82,7 @@ public class DialogueUI : MonoBehaviour
         textLabel.ForceMeshUpdate();
         int totalCharacters = textLabel.textInfo.characterCount;
         _audioSource.Play();
+        click.SetActive(false);
 
         // variable que sirve de index para mostrar letra por letra hasta llegar al maximo a la velocidad del textSpeed
         int visibleCount = 0;
@@ -91,6 +95,7 @@ public class DialogueUI : MonoBehaviour
 
         _isTyping = null;
         _audioSource.Stop();
+        click.SetActive(true);
     }
 
     //actualiza el index, si hay mas dialogo que mostrar, se suma el index y se muestra dicho nuevo dialogo,

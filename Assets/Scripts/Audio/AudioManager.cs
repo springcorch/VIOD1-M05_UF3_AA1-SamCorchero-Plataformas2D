@@ -72,6 +72,12 @@ public class AudioManager : MonoBehaviour
                 PlaySFX(rainSFX);
                 break;
 
+            case "Level_Selector":
+                if (musicSource.clip != mainmenuMusic)
+                    TransitionToMusic(mainmenuMusic);
+                    PlaySFX(nightSFX);
+                break;
+
             case "Level_01":
                 if (musicSource.clip != levelsMusic)
                     TransitionToMusic(levelsMusic);

@@ -183,7 +183,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: SETTINGS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 43bf96906a8f02b4990ea23b3c4b841b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a7f13301ed43ae74baae3327133a251b, type: 2}
   m_sharedMaterial: {fileID: -1105309664949825743, guid: 43bf96906a8f02b4990ea23b3c4b841b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &17578563
@@ -626,7 +626,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 73341472a7ca59c46aa711c473a47560, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1632,7 +1632,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: RESUME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 43bf96906a8f02b4990ea23b3c4b841b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a7f13301ed43ae74baae3327133a251b, type: 2}
   m_sharedMaterial: {fileID: -1105309664949825743, guid: 43bf96906a8f02b4990ea23b3c4b841b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1696,7 +1696,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &388228308
@@ -2558,7 +2558,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 73341472a7ca59c46aa711c473a47560, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3050,8 +3050,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Objects: 0 / 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 43bf96906a8f02b4990ea23b3c4b841b, type: 2}
-  m_sharedMaterial: {fileID: -1105309664949825743, guid: 43bf96906a8f02b4990ea23b3c4b841b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a7f13301ed43ae74baae3327133a251b, type: 2}
+  m_sharedMaterial: {fileID: -1105309664949825743, guid: a7f13301ed43ae74baae3327133a251b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3652,7 +3652,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 73341472a7ca59c46aa711c473a47560, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4198,7 +4198,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: MAIN MENU
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 43bf96906a8f02b4990ea23b3c4b841b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a7f13301ed43ae74baae3327133a251b, type: 2}
   m_sharedMaterial: {fileID: -1105309664949825743, guid: 43bf96906a8f02b4990ea23b3c4b841b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4262,7 +4262,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1005995623
@@ -7637,7 +7637,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: EXIT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 43bf96906a8f02b4990ea23b3c4b841b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a7f13301ed43ae74baae3327133a251b, type: 2}
   m_sharedMaterial: {fileID: -1105309664949825743, guid: 43bf96906a8f02b4990ea23b3c4b841b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -7701,7 +7701,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1966003677
