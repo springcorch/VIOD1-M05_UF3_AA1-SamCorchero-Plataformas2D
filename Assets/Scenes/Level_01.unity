@@ -1104,7 +1104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvlCleared: {fileID: 996317827}
   scoreObjects: {fileID: 734617479}
-  nameScene: Tutorial_Movement
+  nameScene: Level_Selector
 --- !u!1 &203857130
 GameObject:
   m_ObjectHideFlags: 0

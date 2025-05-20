@@ -417,7 +417,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pulsa E para entrar
+  m_text: Pulsa E para interactuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a7f13301ed43ae74baae3327133a251b, type: 2}
   m_sharedMaterial: {fileID: -1105309664949825743, guid: a7f13301ed43ae74baae3327133a251b, type: 2}
