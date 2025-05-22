@@ -82,6 +82,9 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("Falling", false);
         }
+        else {
+            animator.SetBool("Falling", false);
+        }
 
         //WALL SLIDING LOGIC
         if (isTouchingWall && !CheckGround.isGrounded) { 

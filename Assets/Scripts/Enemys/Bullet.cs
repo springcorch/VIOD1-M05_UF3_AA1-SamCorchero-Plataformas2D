@@ -30,4 +30,9 @@ public class Bullet : MonoBehaviour
             transform.Translate(Vector2.left * speed * Time.deltaTime);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy (gameObject);
+    }
 }
