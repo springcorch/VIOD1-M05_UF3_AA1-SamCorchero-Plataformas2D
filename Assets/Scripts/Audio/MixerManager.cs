@@ -16,9 +16,9 @@ public class MixerManager : MonoBehaviour
     {
         // Cargar valores guardados
         masterSlider.value = PlayerPrefs.GetFloat("Master", 1.0f);
-        musicSlider.value = PlayerPrefs.GetFloat("Music", 0.25f);
+        musicSlider.value = PlayerPrefs.GetFloat("Music", 0.75f);
         ambienceSlider.value = PlayerPrefs.GetFloat("Ambience", 0.50f);
-        sfxSlider.value = PlayerPrefs.GetFloat("SFX", 0.35f);
+        sfxSlider.value = PlayerPrefs.GetFloat("SFX", 1.0f);
 
         SetMasterVolume(masterSlider.value);
         SetMusicVolume(musicSlider.value);
