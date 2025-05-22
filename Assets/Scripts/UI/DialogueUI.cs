@@ -31,7 +31,8 @@ public class DialogueUI : MonoBehaviour
     {
         if (playerM != null)
         {
-            playerM.enabled = false;
+            playerM.moveSpeed = 0.0f;
+            playerM.animator.Play("Idle");
         }
         textLabel.text = string.Empty;
         StartDialogue();
@@ -111,7 +112,7 @@ public class DialogueUI : MonoBehaviour
         {
             if (playerM != null)
             {
-                playerM.enabled = true;
+                playerM.moveSpeed = 6.0f;
             }
             textLabel.text = string.Empty;
             Destroy(gameObject);

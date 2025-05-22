@@ -7,12 +7,17 @@ public class PlayerRespawn : MonoBehaviour
     public GameObject[] hearts;
     private int life;
 
+    //Impulso hacia atras al hacernos dano
+    public float impulse = 5.0f;
+
     //Parametros para indicar la posicion del checkpoint en x y en y, estan en floats en vez de Vector2
     //porque los PlayerPrefs solo guardan floats o ints (en este caso, pueden guardar mas cosas), y preferia
     //que guardase un float en vez de un int.
     private float checkPointPosX, checkPointPosY;
 
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +25,8 @@ public class PlayerRespawn : MonoBehaviour
         //la vida es igual a la longitud de hearts que tengamos en nuestra array
         life = hearts.Length;
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         //Comprobamos que se ha guardado algun "checkPointPosX", lo que significa que ha tocado un checkPoint
         if (PlayerPrefs.GetFloat("checkPointPosX") != 0)
@@ -62,6 +69,8 @@ public class PlayerRespawn : MonoBehaviour
     public void PlayerDamaged()
     {
         life--;
+        // Impulsa al personaje hacia arriba (logica trampoline)
+        rb.velocity = (Vector2.up * impulse);
         CheckLife();
     }
 }

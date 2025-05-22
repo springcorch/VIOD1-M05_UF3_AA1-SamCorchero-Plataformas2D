@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     //Animaciones para movimiento
     private SpriteRenderer spriteRenderer;
-    private Animator animator;
+    public Animator animator;
 
     void Start() {
         //Busca los componentes en el objeto:
