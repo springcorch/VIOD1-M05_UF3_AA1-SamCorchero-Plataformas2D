@@ -12,12 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Cutscene_Intro.unity
     guid: b6eaad146fae2f9439f8e754f8272de3
   - enabled: 1
-    path: Assets/Scenes/Tutorial_Movement.unity
-    guid: 4f7a09821e372584fa4dbc310d8d1ff9
+    path: Assets/Scenes/Level_01.unity
+    guid: 07f0a9aab48addf4791aea2faf4eb19f
   - enabled: 1
     path: Assets/Scenes/Level_Selector.unity
     guid: 84a20c51f072c7244b95064191b1595f
-  - enabled: 1
-    path: Assets/Scenes/Level_01.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
