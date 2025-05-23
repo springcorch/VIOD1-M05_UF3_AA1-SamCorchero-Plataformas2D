@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     //Animaciones para movimiento
     private SpriteRenderer spriteRenderer;
+    public AudioSource audSource;
+    private bool reproduced = false;
     public Animator animator;
 
     void Start() {
@@ -37,6 +39,11 @@ public class PlayerMovement : MonoBehaviour
         //Movimiento vertical del personaje (cae por gravedad del rb):
         if (Input.GetKey("space") && !wallSliding)
         {
+            if (!reproduced)
+            {
+                audSource.Play();
+                reproduced = true;
+            }
             //Si toca el suelo - if
             if (CheckGround.isGrounded)
             {
@@ -51,6 +58,11 @@ public class PlayerMovement : MonoBehaviour
                     //Haremos doble salto y volveremos a no poder saltar otra vez
                     if (canDoubleJump)
                     {
+                        reproduced = false;
+                        if (!reproduced) { 
+                            audSource.Play();
+                            reproduced = true;
+                        }
                         animator.SetBool("DoubleJump", true);
                         rb.velocity = new Vector2(rb.velocity.x, doubleJumpSpeed);
                         canDoubleJump = false;
@@ -67,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (CheckGround.isGrounded)
         {
+            reproduced = false;
             animator.SetBool("Jump", false);
             animator.SetBool("DoubleJump", false);
             animator.SetBool("Falling", true);

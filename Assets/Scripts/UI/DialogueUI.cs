@@ -112,7 +112,7 @@ public class DialogueUI : MonoBehaviour
         {
             if (playerM != null)
             {
-                playerM.moveSpeed = 6.0f;
+                playerM.moveSpeed = 12.0f;
             }
             textLabel.text = string.Empty;
             Destroy(gameObject);

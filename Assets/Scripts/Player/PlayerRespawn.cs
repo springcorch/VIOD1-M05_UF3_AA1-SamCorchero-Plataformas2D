@@ -18,6 +18,7 @@ public class PlayerRespawn : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
+    public AudioSource audSource;
 
     // Start is called before the first frame update
     void Start()
@@ -45,8 +46,7 @@ public class PlayerRespawn : MonoBehaviour
         {
             animator.Play("Hit");
             Destroy(hearts[0].gameObject);
-            //hace reset de la escena
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Invoke("ResetScene", 0.25f);
         }
         else if (life < 2)
         {
@@ -69,8 +69,15 @@ public class PlayerRespawn : MonoBehaviour
     public void PlayerDamaged()
     {
         life--;
+        audSource.Play();
         // Impulsa al personaje hacia arriba (logica trampoline)
         rb.velocity = (Vector2.up * impulse);
         CheckLife();
+    }
+
+    private void ResetScene()
+    {
+        //hace reset de la escena
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
