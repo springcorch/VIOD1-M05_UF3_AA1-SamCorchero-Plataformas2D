@@ -34,7 +34,7 @@ public class ObjectManager : MonoBehaviour
         //Va restando cuando vayamos cogiendo los objetos, haciendolo un contador
         collectedObjects = transform.childCount;
         //Muestra este texto en pantalla actualizado, los ints se vuelven strings para evitar fallos a la hora de mostrarse
-        scoreObjects.text = "Notes: " + collectedObjects.ToString() + " / " + totalObjects.ToString();
+        scoreObjects.text = "Kiwis: " + collectedObjects.ToString() + " / " + totalObjects.ToString();
     }
 
     //Funcion para cambiar de escena

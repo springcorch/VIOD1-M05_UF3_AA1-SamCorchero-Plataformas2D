@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class CheckDialogue : MonoBehaviour
 {
-    //questMark and dialogueBox marcable en el inspector
+    //questMark and dialogues marcable en el inspector
     public GameObject questMark;
-    public GameObject dialogueBox;
+    public GameObject dialogue1;
 
     //Nuestro trigger ha entrado en una colisión
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,7 +23,7 @@ public class CheckDialogue : MonoBehaviour
         //si se pulsa "e" se activara el dialogo
         if (Input.GetKey("e"))
         {
-            dialogueBox.SetActive(true);
+            dialogue1.SetActive(true);
             Destroy(questMark);
             Destroy(gameObject);
         }
