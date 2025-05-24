@@ -1,41 +1,64 @@
-using UnityEngine.SceneManagement;
 using UnityEngine;
-using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    public TMP_Text info;
+    public GameObject questMark;
 
     //Nombre de la escena cambiable en el inspector
     public string lvlName;
+
+    private bool doorUnlocked = false;
     private bool inDoor = false;
 
-    //Al triggear con una colision tageada como Player, se muestra un texto
-    private void OnTriggerEnter2D(Collider2D collision)
+    private Animator anim;
+    private AudioSource aud;
+
+    void Start()
     {
-        if (collision.gameObject.CompareTag("Player")) {
-            info.gameObject.SetActive(true);
+        anim = GetComponent<Animator>();
+        aud = GetComponent<AudioSource>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+
+        if (other.CompareTag("Player"))
+        {
             inDoor = true;
+
+            Key key = FindObjectOfType<Key>();
+            if (key != null)
+            {
+                if (key.isFollowing)
+                {
+                    key.DisableKey();
+                    aud.Play();
+                    anim.SetBool("isOpen", true);
+                    doorUnlocked = true;
+                }
+            }
         }
     }
 
-    //Al salir de un trigger con una colision tageada como Player se oculta el texto
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Player")) {
-            //si info no se ha destruido aún, se desactiva
-            if(info != null) { 
-                info.gameObject.SetActive(false);
-                inDoor = false;
-            }
+        if (other.CompareTag("Player"))
+        {
+            inDoor = false;
+            questMark.SetActive(false);
         }
     }
 
     private void Update()
     {
         //Si se clica e cuando estamos colisionando con el Player (inDoor = true) se cambia de escena
-        if (inDoor && Input.GetKey("e")) {
-            SceneManager.LoadScene(lvlName);
+        if (doorUnlocked && inDoor)
+        {
+            questMark.SetActive(true);
+            if (Input.GetKey("e")) { 
+                SceneManager.LoadScene(lvlName);
+            }
         }
     }
 }

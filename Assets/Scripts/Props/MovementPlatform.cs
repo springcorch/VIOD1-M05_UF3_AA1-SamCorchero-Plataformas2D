@@ -50,12 +50,12 @@ public class Movementplatform : MonoBehaviour
     //Nos hara hijo de la plataforma y asi podremos movernos con tal plataforma
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.collider.transform.SetParent(transform);
+        collision.transform.SetParent(transform);
     }
 
     //Nos quitara de ser hijo de la plataforma
     private void OnCollisionExit2D(Collision2D collision)
     {
-        collision.collider.transform.SetParent(null);
+        collision.transform.SetParent(null);
     }
 }
