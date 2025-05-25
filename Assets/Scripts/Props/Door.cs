@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Door : MonoBehaviour
 {
@@ -7,8 +8,10 @@ public class Door : MonoBehaviour
 
     //Nombre de la escena cambiable en el inspector
     public string lvlName;
-
-    private bool doorUnlocked = false;
+    public PlayerMovement playerM;
+    
+    private Key key;
+    private bool canUnlock = false;
     private bool inDoor = false;
 
     private Animator anim;
@@ -26,16 +29,11 @@ public class Door : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             inDoor = true;
+            key = FindObjectOfType<Key>();
 
-            Key key = FindObjectOfType<Key>();
-            if (key != null)
-            {
-                if (key.isFollowing)
-                {
-                    key.DisableKey();
-                    aud.Play();
-                    anim.SetBool("isOpen", true);
-                    doorUnlocked = true;
+            if (key != null) {
+                if (key.isFollowing) {
+                    canUnlock = true;  
                 }
             }
         }
@@ -52,13 +50,24 @@ public class Door : MonoBehaviour
 
     private void Update()
     {
-        //Si se clica e cuando estamos colisionando con el Player (inDoor = true) se cambia de escena
-        if (doorUnlocked && inDoor)
+        //Si se clica e cuando estamos colisionando con el Player (inDoor = true) hace una animacion de abrir puerta
+        if (canUnlock && inDoor) 
         {
             questMark.SetActive(true);
-            if (Input.GetKey("e")) { 
-                SceneManager.LoadScene(lvlName);
+            if (Input.GetKey("e"))
+            {
+                key.DisableKey();
+                aud.Play();
+                anim.SetBool("isOpen", true);
+                playerM.enabled = false;
+                Invoke("LoadLoopScene", 2.0f);
             }
         }
+
+    }
+
+    private void LoadLoopScene()
+    {
+        SceneManager.LoadScene(lvlName);
     }
 }

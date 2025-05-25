@@ -7835,6 +7835,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1203616264138652226, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303790613827700358, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876549358757055430, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336105405441553786, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4965299642562840506, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
       propertyPath: playerM
       value: 
@@ -7876,6 +7892,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5611094873195516913, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
       propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749019157947369525, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5765772216365169970, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5826244461692569088, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
@@ -7962,15 +7986,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6311273275900576205, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6493180320319846094, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 203538904}
+    - target: {fileID: 6849854480838103667, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7395271410167318880, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308582023331945046, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8765101206721621648, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2398419833702565596, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
     - {fileID: 8515134838919865345, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
     - {fileID: 1257315676893843296, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
+    - {fileID: 4211998285642338751, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
@@ -8188,6 +8233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questMark: {fileID: 165308255}
   lvlName: Level_01
+  playerM: {fileID: 1356991469}
 --- !u!95 &909197019
 Animator:
   serializedVersion: 5
