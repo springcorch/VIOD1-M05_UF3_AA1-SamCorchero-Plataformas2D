@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Door : MonoBehaviour
 {
@@ -59,7 +58,7 @@ public class Door : MonoBehaviour
                 key.DisableKey();
                 aud.Play();
                 anim.SetBool("isOpen", true);
-                playerM.enabled = false;
+                playerM.moveSpeed = 0;
                 Invoke("LoadLoopScene", 2.0f);
             }
         }

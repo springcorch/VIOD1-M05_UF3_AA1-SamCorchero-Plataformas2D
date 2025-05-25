@@ -28,7 +28,7 @@ public class ObjectManager : MonoBehaviour
             //Se muestra texto de victoria
             lvlCleared.gameObject.SetActive(true);
             //activa la funcion de ChangeScene despues de un segundo
-            Invoke("ChangeScene", 1);
+            Invoke("ChangeScene", 2);
         }
 
         //Va restando cuando vayamos cogiendo los objetos, haciendolo un contador

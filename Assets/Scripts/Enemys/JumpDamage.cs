@@ -47,7 +47,7 @@ public class JumpDamage : MonoBehaviour
         {
             destroyParticle.SetActive(true);
             spriteRend.enabled = false;
-            Invoke("EnemyDie", 0.2f);
+            Invoke("EnemyDie", 0.25f);
         }
     }
 
