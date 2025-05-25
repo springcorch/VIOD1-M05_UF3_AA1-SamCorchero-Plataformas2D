@@ -8257,7 +8257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questMark: {fileID: 165308255}
-  lvlName: Menu_Main
+  lvlName: Thanks
   playerM: {fileID: 1356991469}
 --- !u!95 &909197019
 Animator:
