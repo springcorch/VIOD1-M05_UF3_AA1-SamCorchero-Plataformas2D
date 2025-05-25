@@ -7994,6 +7994,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 203538904}
+    - target: {fileID: 6753198390545277900, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753198390545277900, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6adf3479fdde2e34db38ae9b940389b0, type: 3}
     - target: {fileID: 6849854480838103667, guid: 7414bf2c618f01a4eac67dfd801f8756, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -8249,7 +8257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questMark: {fileID: 165308255}
-  lvlName: Level_01
+  lvlName: Menu_Main
   playerM: {fileID: 1356991469}
 --- !u!95 &909197019
 Animator:
